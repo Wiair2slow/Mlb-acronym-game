@@ -1,0 +1,180 @@
+/* style.css */
+
+:root {
+  --bg: #05060a;
+  --bg-panel: #111320;
+  --accent: #4fd1c5;
+  --accent-soft: #2c7a7b;
+  --text-main: #f7fafc;
+  --text-muted: #a0aec0;
+  --danger: #f56565;
+  --success: #48bb78;
+  --border: #2d3748;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a202c 0, #05060a 55%);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 1100px;
+  padding: 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+}
+
+.image-panel,
+.info-panel {
+  background: var(--bg-panel);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.image-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-panel img {
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  filter: brightness(0) invert(0.9);
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.acronym-display {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#acronym-text {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+#acronym-type {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+#guess-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#guess-form label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+#guess-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0b0d16;
+  color: var(--text-main);
+  outline: none;
+}
+
+#guess-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+button {
+  cursor: pointer;
+  border-radius: 999px;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #0b0d16;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.08s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+#feedback {
+  min-height: 24px;
+  font-size: 0.95rem;
+}
+
+#feedback.correct {
+  color: var(--success);
+}
+
+#feedback.incorrect {
+  color: var(--danger);
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+}

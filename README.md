@@ -1,9 +1,1 @@
-mlb-acronym-game/
-  index.html
-  style.css
-  script.js
-  assets/
-    players/
-      generic-batter-1.png
-      generic-batter-2.png
-      ...
+mlb-acronym-game

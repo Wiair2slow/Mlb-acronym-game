@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MLB Acronym Game 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>MLB Acronym Challenge 2025</h1>
+      <p>Guess the full meaning of the acronym while studying the stance.</p>
+    </header>
+
+    <main class="game">
+      <section class="image-panel">
+        <img id="player-image" src="" alt="Player silhouette" />
+      </section>
+
+      <section class="info-panel">
+        <div class="acronym-display">
+          <span id="acronym-text">NYY</span>
+          <span id="acronym-type"></span>
+        </div>
+
+        <form id="guess-form">
+          <label for="guess-input">Your answer:</label>
+          <input
+            type="text"
+            id="guess-input"
+            autocomplete="off"
+            placeholder="Type the full phrase..."
+          />
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="feedback"></div>
+        <button id="next-button" class="hidden">Next Acronym</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Built for fun · 2025 MLB vibes · Dark mode</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
